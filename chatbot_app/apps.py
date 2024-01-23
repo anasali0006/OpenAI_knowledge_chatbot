@@ -1,5 +1,5 @@
 from django.apps import AppConfig
-
+from .openai_handler import OpenAIHandler
 
 
 class ChatbotAppConfig(AppConfig):
@@ -51,9 +51,9 @@ class ChatbotAppConfig(AppConfig):
             Strategy."}
         ]
 
+        vector_embeddings = [OpenAIHandler.generate_single_embedding(chunk['text']) for chunk in chunks_for_chatbot]
 
-
-
+        print(123)
 
 
         pass

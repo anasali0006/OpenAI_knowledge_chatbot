@@ -14,5 +14,6 @@ class ChatbotRequestHandler(APIView):
 
     @classmethod
     def get(cls, request):
+        print("Sanity Check")
         pass
 
